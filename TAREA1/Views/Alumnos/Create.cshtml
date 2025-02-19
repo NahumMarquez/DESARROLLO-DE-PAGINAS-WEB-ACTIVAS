@@ -13,7 +13,9 @@
 </nav>
 
 <form asp-action="Create" asp-controller="Alumnos" method="POST">
-    <div asp-validation-summary="ModelOnly" class="alert alert-danger"></div>
+    <div asp-validation-summary="All">
+        <i class=" bg-info bi-exclamation-triangle-fill"></i>
+    </div>
 
     <div class="input-group mb-3">
         <span class="input-group-text" id="basic-addon1"><span class="fas fa-user"></span></span>
@@ -27,7 +29,7 @@
     </div>
     <div class="input-group mb-3">
         <span class="input-group-text" id="basic-addon1"><span class="fas fa-list"></span></span>
-        <input type="number" class="form-control" asp-for="Edad" placeholder="Edad" aria-label="Edad">
+        <input type="number" class="form-control" asp-for="Edad" value="@((Model.Edad == 0) ? string.Empty : Model.Edad)" placeholder="edad" arial-label="Edad">
     </div>
     <div class="input-group mb-3">
         <span class="input-group-text" id="basic-addon1"><span class="fas fa-list"></span></span>
@@ -35,11 +37,11 @@
     </div>
     <div class="input-group mb-3">
         <span class="input-group-text" id="basic-addon1"><span class="fas fa-hashtag"></span></span>
-        <input type="number" class="form-control" asp-for="CantidaMaterias" placeholder="Cantida de Materias" aria-label="CantidaMaterias">
+        <input type="number" class="form-control" asp-for="CantidaMaterias" value="@((Model.CantidaMaterias == 0) ? string.Empty : Model.CantidaMaterias)" placeholder="Cantida de Materias" aria-label="CantidaMaterias">
     </div>
     <div class="input-group mb-3">
         <span class="input-group-text" id="basic-addon1"><span class="fas fa-hashtag"></span></span>
-        <input type="number" class="form-control" asp-for="Ciclo" placeholder="Ciclo" aria-label="Ciclo">
+        <input type="number" class="form-control" asp-for="Ciclo" value="@((Model.Ciclo == 0) ? string.Empty : Model.Ciclo)" placeholder="Ciclo" aria-label="Ciclo">
     </div>
     <div class="input-group mb-3">
         <span class="input-group-text" id="basic-addon1"><span class="fas fa-calendar"></span></span>

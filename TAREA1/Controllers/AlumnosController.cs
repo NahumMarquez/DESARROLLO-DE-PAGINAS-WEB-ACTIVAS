@@ -14,10 +14,11 @@ namespace TAREA1.Controllers
         }
         public IActionResult Index()
         {
-            List<Alumnos> alumnos = _dbConn.Alumnos.ToList();
+             List<Alumnos> alumnos = _dbConn.Alumnos.ToList();
             return View(alumnos);
         }
 
+        [HttpGet]
         public IActionResult Create() 
         {
             Alumnos alumno = new();

@@ -27,7 +27,7 @@ namespace PROYECTO1.Models
         [Required(ErrorMessage = "Cantidad de Materias es requerido")]
         public int CantidaMaterias { get; set; }
         [Required(ErrorMessage = "Ciclo es requerido")]
-        public string Ciclo { get; set; }
+        public int Ciclo { get; set; }
         [Required(ErrorMessage = "Fecha de Nacimiento es requerido")]
         public DateTime FechaNacimiento { get; set; }
         [NotMapped]
